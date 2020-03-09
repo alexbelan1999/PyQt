@@ -1,11 +1,15 @@
 from PyQt5 import QtCore, QtGui, QtWidgets
+
 import postgresql as pg
+
 
 class Ui_Login(object):
     def setupUi(self, Login):
         Login.setObjectName("Login")
-        Login.resize(800, 600)
-
+        Login.setFixedSize(800, 600)
+        # Login.resize(800, 600)
+        ico = QtGui.QIcon("mylogo.png")
+        Login.setWindowIcon(ico)
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(14)
@@ -102,7 +106,7 @@ class Ui_Login(object):
         print(user)
         print(password)
         print(host)
-        check = pg.check_connection(dbname,user,password,host)
+        check = pg.check_connection(dbname, user, password, host)
 
         if check:
             self.label_5.setText("OK!")

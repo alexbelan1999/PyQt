@@ -69,5 +69,4 @@ def check_connection(dbname: str, user: str, password: str, host: str):
             connection.close()
     return exit
 
-
-print(check_connection(dbname='testdb', user='postgres', password='1234', host='127.0.0.1'))
+# print(check_connection(dbname='testdb', user='postgres', password='1234', host='127.0.0.1'))
