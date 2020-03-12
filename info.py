@@ -2,19 +2,17 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 
 import postgresql as pg
 
-
-class Ui_Login(object):
-    def setupUi(self, Login):
-        Login.setObjectName("Login")
-        Login.setFixedSize(520, 420)
-        # Login.resize(800, 600)
+class Ui_Info(object):
+    def setupUi(self, Info):
+        Info.setObjectName("Info")
+        Info.setFixedSize(520, 420)
         ico = QtGui.QIcon("mylogo.png")
-        Login.setWindowIcon(ico)
+        Info.setWindowIcon(ico)
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(14)
 
-        self.centralwidget = QtWidgets.QWidget(Login)
+        self.centralwidget = QtWidgets.QWidget(Info)
         self.centralwidget.setObjectName("centralwidget")
 
         self.label = QtWidgets.QLabel(self.centralwidget)
@@ -25,6 +23,7 @@ class Ui_Login(object):
         self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
         self.lineEdit.setGeometry(QtCore.QRect(170, 50, 180, 20))
         self.lineEdit.setFont(font)
+        self.lineEdit.setDisabled(True)
         self.lineEdit.setObjectName("lineEdit")
 
         self.label_2 = QtWidgets.QLabel(self.centralwidget)
@@ -35,6 +34,7 @@ class Ui_Login(object):
         self.lineEdit_2 = QtWidgets.QLineEdit(self.centralwidget)
         self.lineEdit_2.setGeometry(QtCore.QRect(170, 120, 180, 20))
         self.lineEdit_2.setFont(font)
+        self.lineEdit_2.setDisabled(True)
         self.lineEdit_2.setObjectName("lineEdit_2")
 
         self.label_3 = QtWidgets.QLabel(self.centralwidget)
@@ -45,7 +45,7 @@ class Ui_Login(object):
         self.lineEdit_3 = QtWidgets.QLineEdit(self.centralwidget)
         self.lineEdit_3.setGeometry(QtCore.QRect(170, 195, 180, 20))
         self.lineEdit_3.setFont(font)
-        self.lineEdit_3.setEchoMode(QtWidgets.QLineEdit.Password)
+        self.lineEdit_3.setDisabled(True)
         self.lineEdit_3.setObjectName("lineEdit_3")
 
         self.label_4 = QtWidgets.QLabel(self.centralwidget)
@@ -56,7 +56,7 @@ class Ui_Login(object):
         self.lineEdit_4 = QtWidgets.QLineEdit(self.centralwidget)
         self.lineEdit_4.setGeometry(QtCore.QRect(170, 280, 180, 20))
         self.lineEdit_4.setFont(font)
-        self.lineEdit_4.setInputMask("000.000.000.000;_")
+        self.lineEdit.setDisabled(True)
         self.lineEdit_4.setObjectName("lineEdit_4")
 
         self.pushButton = QtWidgets.QPushButton(self.centralwidget)
@@ -73,31 +73,31 @@ class Ui_Login(object):
         self.pushButton_2 = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_2.setGeometry(QtCore.QRect(260, 320, 90, 30))
         self.pushButton_2.setFont(font)
-        self.pushButton_2.clicked.connect(self.btnLogin)
+        self.pushButton_2.clicked.connect(self.btnInfo)
         self.pushButton_2.setObjectName("pushButton_2")
 
-        Login.setCentralWidget(self.centralwidget)
-        self.menubar = QtWidgets.QMenuBar(Login)
+        Info.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(Info)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 20))
         self.menubar.setObjectName("menubar")
 
-        Login.setMenuBar(self.menubar)
-        self.statusbar = QtWidgets.QStatusBar(Login)
+        Info.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(Info)
         self.statusbar.setObjectName("statusbar")
-        Login.setStatusBar(self.statusbar)
+        Info.setStatusBar(self.statusbar)
 
-        self.retranslateUi(Login)
-        QtCore.QMetaObject.connectSlotsByName(Login)
+        self.retranslateUi(Info)
+        QtCore.QMetaObject.connectSlotsByName(Info)
 
-    def retranslateUi(self, Login):
+    def retranslateUi(self, Info):
         _translate = QtCore.QCoreApplication.translate
-        Login.setWindowTitle(_translate("Login", "Login"))
-        self.label.setText(_translate("Login", "Введите базу данных:"))
-        self.label_2.setText(_translate("Login", "Пользователь:"))
-        self.label_3.setText(_translate("Login", "Пароль:"))
-        self.label_4.setText(_translate("Login", "Host:"))
-        self.pushButton.setText(_translate("Login", "Test"))
-        self.pushButton_2.setText(_translate("Login", "Login"))
+        Info.setWindowTitle(_translate("Info", "Info"))
+        self.label.setText(_translate("Info", "Введите базу данных:"))
+        self.label_2.setText(_translate("Info", "Пользователь:"))
+        self.label_3.setText(_translate("Info", "Пароль:"))
+        self.label_4.setText(_translate("Info", "Host:"))
+        self.pushButton.setText(_translate("Info", "Test"))
+        self.pushButton_2.setText(_translate("Info", "Info"))
 
     def btnClicked(self):
         dbname = self.lineEdit.text()
@@ -115,5 +115,5 @@ class Ui_Login(object):
         else:
             self.label_5.setText("ERROR!")
 
-    def btnLogin(self):
-        print("Login")
+    def btnInfo(self):
+        print("Info")
