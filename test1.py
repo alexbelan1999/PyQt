@@ -2,11 +2,12 @@ import sys
 
 from PyQt5 import QtWidgets
 
-from info import Ui_Info
 import test
+from info import Ui_Info
+
 
 class Info(QtWidgets.QMainWindow):
-    def __init__(self, db = "", user = "", password = "", host = ""):
+    def __init__(self, db="", user="", password="", host=""):
         super(Info, self).__init__()
         self.ui = Ui_Info()
         self.ui.setupUi(self)
