@@ -11,11 +11,13 @@ class Login(QtWidgets.QMainWindow):
         super(Login, self).__init__()
         self.ui = Ui_Login()
         self.ui.setupUi(self)
-        self.ui.pushButton_2.clicked.connect(self.info_start)
+        self.ui.pushButton_info.clicked.connect(self.info_start)
+        self.ui.pushButton_exit.clicked.connect(self.close)
 
     def info_start(self):
-        self.open_info = test1.Info(self.ui.lineEdit.text(), self.ui.lineEdit_2.text(), self.ui.lineEdit_3.text(),
-                                    self.ui.lineEdit_4.text())
+        self.open_info = test1.Info(self.ui.lineEdit_db.text(), self.ui.lineEdit_user.text(),
+                                    self.ui.lineEdit_password.text(),
+                                    self.ui.lineEdit_host.text())
         self.open_info.show()
         self.close()
 

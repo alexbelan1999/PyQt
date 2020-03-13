@@ -52,7 +52,7 @@ def select_all():
             connection.close()
 
 
-def check_connection(dbname: str, user: str, password: str, host: str):
+def test_connection(dbname: str, user: str, password: str, host: str):
     exit = True
 
     try:
