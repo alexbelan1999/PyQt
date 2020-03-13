@@ -3,18 +3,24 @@ import sys
 from PyQt5 import QtWidgets
 
 from info import Ui_Info
-
+import test
 
 class Info(QtWidgets.QMainWindow):
-    def __init__(self, db, user, password, host):
+    def __init__(self, db = "", user = "", password = "", host = ""):
         super(Info, self).__init__()
         self.ui = Ui_Info()
         self.ui.setupUi(self)
-        self.ui.lineEdit.setText(db)
-        self.ui.lineEdit_2.setText(user)
-        self.ui.lineEdit_3.setText(password)
-        self.ui.lineEdit_4.setText(host)
-        print(db, " ", user, " ", password, " ", host)
+        self.ui.lineEdit_db.setText(db)
+        self.ui.lineEdit_user.setText(user)
+        self.ui.lineEdit_password.setText(password)
+        self.ui.lineEdit_host.setText(host)
+        self.ui.pushButton_back.clicked.connect(self.back)
+        self.ui.pushButton_exit.clicked.connect(self.close)
+
+    def back(self):
+        self.open_login = test.Login()
+        self.open_login.show()
+        self.close()
 
 
 if __name__ == '__main__':
