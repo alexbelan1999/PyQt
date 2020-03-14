@@ -69,10 +69,10 @@ class Ui_Login(object):
         self.label_check.setFont(font)
         self.label_check.setObjectName("label_check")
 
-        self.pushButton_info = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_info.setGeometry(QtCore.QRect(260, 320, 90, 30))
-        self.pushButton_info.setFont(font)
-        self.pushButton_info.setObjectName("pushButton_info")
+        self.pushButton_menu = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_menu.setGeometry(QtCore.QRect(260, 320, 90, 30))
+        self.pushButton_menu.setFont(font)
+        self.pushButton_menu.setObjectName("pushButton_menu")
 
         self.pushButton_exit = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_exit.setGeometry(QtCore.QRect(170, 400, 90, 30))
@@ -100,7 +100,7 @@ class Ui_Login(object):
         self.label_password.setText(_translate("Login", "Пароль:"))
         self.label_host.setText(_translate("Login", "Host:"))
         self.pushButton_test.setText(_translate("Login", "Тест"))
-        self.pushButton_info.setText(_translate("Login", "Info"))
+        self.pushButton_menu.setText(_translate("Login", "Меню"))
         self.pushButton_exit.setText(_translate("Login", "Выход"))
 
     def btnTest(self):
