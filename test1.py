@@ -7,10 +7,13 @@ from info import Ui_Info
 
 
 class Info(QtWidgets.QMainWindow):
-    def __init__(self, info = ["","","",""]):
+    info_info = []
+
+    def __init__(self, info=["", "", "", ""]):
         super(Info, self).__init__()
         self.ui = Ui_Info()
         self.ui.setupUi(self)
+        Info.info_info = info
         self.ui.lineEdit_db.setText(info[0])
         self.ui.lineEdit_user.setText(info[1])
         self.ui.lineEdit_password.setText(info[2])
@@ -19,8 +22,8 @@ class Info(QtWidgets.QMainWindow):
         self.ui.pushButton_exit.clicked.connect(self.close)
 
     def back(self):
-        self.open_login = test2.Menu()
-        self.open_login.show()
+        self.open_menu = test2.Menu(Info.info_info)
+        self.open_menu.show()
         self.close()
 
 
