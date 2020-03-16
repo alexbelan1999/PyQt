@@ -5,6 +5,7 @@ from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QFileDialog
 
 import test2
+import test4
 from training import Ui_Training
 
 
@@ -31,7 +32,9 @@ class Training(QtWidgets.QMainWindow):
     def next(self):
         Training.file = self.ui.lineEdit_file.text()
         Training.dir = self.ui.lineEdit_dir.text()
-        print(Training.file, " ", Training.dir)
+        self.open_progress = test4.Progress_training(Training.training_info,Training.file,Training.dir)
+        self.open_progress.show()
+        self.close()
 
     def open_dir(self):
         fdir = QFileDialog.getExistingDirectory(self, 'Open dir', os.getcwd())
