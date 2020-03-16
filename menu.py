@@ -60,7 +60,7 @@ class Ui_Menu(object):
     def retranslateUi(self, Menu):
         _translate = QtCore.QCoreApplication.translate
         Menu.setWindowTitle(_translate("Menu", "Menu"))
-        self.pushButton_training.setText(_translate("Menu", "Обучение"))
+        self.pushButton_training.setText(_translate("Menu", "Подготовка"))
         self.pushButton_recognition.setText(_translate("Menu", "Распознавание"))
         self.pushButton_db.setText(_translate("Menu", "Работа с БД"))
         self.pushButton_exit.setText(_translate("Menu", "Выход"))

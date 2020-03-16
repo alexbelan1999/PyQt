@@ -4,6 +4,7 @@ from PyQt5 import QtWidgets
 
 import test
 import test1
+import test3
 from menu import Ui_Menu
 
 
@@ -18,6 +19,7 @@ class Menu(QtWidgets.QMainWindow):
         self.ui.pushButton_info.clicked.connect(self.start_info)
         self.ui.pushButton_back.clicked.connect(self.back)
         self.ui.pushButton_exit.clicked.connect(self.close)
+        self.ui.pushButton_training.clicked.connect(self.start_training)
 
     def back(self):
         self.open_login = test.Login()
@@ -27,6 +29,11 @@ class Menu(QtWidgets.QMainWindow):
     def start_info(self):
         self.open_info = test1.Info(Menu.menu_info)
         self.open_info.show()
+        self.close()
+
+    def start_training(self):
+        self.open_training = test3.Training(Menu.menu_info)
+        self.open_training.show()
         self.close()
 
 
