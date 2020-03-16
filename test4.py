@@ -22,27 +22,31 @@ class Progress_training(QtWidgets.QMainWindow):
         Progress_training.progress_training_info = info
         Progress_training.file = file
         Progress_training.dir = dir
-        print()
+        self.ui.progressBar.setValue(0)
         self.ui.pushButton_menu.clicked.connect(self.back_menu)
         self.ui.pushButton_exit.clicked.connect(self.close)
-        self.progress()
+        self.ui.pushButton_start.clicked.connect(self.start_progress)
 
     def back_menu(self):
         self.open_menu = test2.Menu(Progress_training.progress_training_info)
         self.open_menu.show()
         self.close()
 
+    def start_progress(self):
+        self.ui.pushButton_exit.setDisabled(True)
+        self.ui.pushButton_menu.setDisabled(True)
+        self.progress()
+
     def progress(self):
-        #TODO work with folder name
-        path = Progress_training.dir + "*"
+        path = Progress_training.dir + "/*"
+        print(path)
         files = len(glob.glob(path))
-        number = 0
+        number = 1
         for file in glob.glob(path):
-            #time.sleep(5)
-            print(file)
-            self.ui.progressBar.setValue(round(number/files) * 100)
+            time.sleep(2)
+            self.ui.progressBar.setValue(round(number/files,2) * 100)
             number += 1
-            if round(number/files) == 1:
+            if  number == files:
                 self.ui.pushButton_exit.setDisabled(False)
                 self.ui.pushButton_menu.setDisabled(False)
 

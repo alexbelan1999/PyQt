@@ -38,7 +38,6 @@ class Training(QtWidgets.QMainWindow):
 
     def open_dir(self):
         fdir = QFileDialog.getExistingDirectory(self, 'Open dir', os.getcwd())
-        print(fdir)
         self.ui.lineEdit_dir.setText(fdir)
 
 if __name__ == '__main__':
