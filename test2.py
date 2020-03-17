@@ -5,6 +5,7 @@ from PyQt5 import QtWidgets
 import test
 import test1
 import test3
+import test5
 from menu import Ui_Menu
 
 
@@ -20,6 +21,7 @@ class Menu(QtWidgets.QMainWindow):
         self.ui.pushButton_back.clicked.connect(self.back)
         self.ui.pushButton_exit.clicked.connect(self.close)
         self.ui.pushButton_training.clicked.connect(self.start_training)
+        self.ui.pushButton_recognition.clicked.connect(self.start_recognition)
 
     def back(self):
         self.open_login = test.Login()
@@ -34,6 +36,11 @@ class Menu(QtWidgets.QMainWindow):
     def start_training(self):
         self.open_training = test3.Training(Menu.menu_info)
         self.open_training.show()
+        self.close()
+
+    def start_recognition(self):
+        self.open_recognition = test5.Rec1(Menu.menu_info)
+        self.open_recognition.show()
         self.close()
 
 
