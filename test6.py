@@ -6,6 +6,7 @@ from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QFileDialog
 
 import test5
+import test7
 from rec2 import Ui_Rec2
 
 
@@ -37,8 +38,8 @@ class Rec2(QtWidgets.QMainWindow):
         Rec2.file = self.ui.comboBox.currentText()
         Rec2.dir = self.ui.lineEdit_dir.text()
         print(Rec2.file," ", Rec2.dir)
-        # self.open_rec3 = test7.Rec3(Rec2.rec2_info,Rec2.file,Rec2.dir)
-        # self.open_rec3.show()
+        self.open_progressrec = test7.Progress_recognition(Rec2.rec2_info,Rec2.file,Rec2.dir)
+        self.open_progressrec.show()
         self.close()
 
     def open_dir(self):
