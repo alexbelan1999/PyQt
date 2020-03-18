@@ -55,7 +55,7 @@ class Ui_Rec1(object):
         _translate = QtCore.QCoreApplication.translate
         Rec1.setWindowTitle(_translate("Rec1", "Recognition"))
         self.pushButton_photo.setText(_translate("Rec1", "Распознавание по фото"))
-        self.pushButton_video.setText(_translate("Rec1", "Распознавнаие по видео"))
+        self.pushButton_video.setText(_translate("Rec1", "Распознавие по видео"))
         self.pushButton_camera.setText(_translate("Rec1", "Распознавание с помощью веб-камеры"))
         self.pushButton_back.setText(_translate("Rec1", "Назад"))
         self.pushButton_exit.setText(_translate("Rec1", "Выход"))

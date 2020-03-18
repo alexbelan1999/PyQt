@@ -4,6 +4,7 @@ from PyQt5 import QtWidgets
 
 import test2
 import test6
+import test8
 from rec1 import Ui_Rec1
 
 
@@ -17,16 +18,22 @@ class Rec1(QtWidgets.QMainWindow):
         Rec1.rec1_info = info
         self.ui.pushButton_back.clicked.connect(self.back)
         self.ui.pushButton_exit.clicked.connect(self.close)
-        self.ui.pushButton_photo.clicked.connect(self.start_rec)
+        self.ui.pushButton_photo.clicked.connect(self.start_rec2)
+        self.ui.pushButton_video.clicked.connect(self.start_rec3)
 
     def back(self):
         self.open_menu = test2.Menu(Rec1.rec1_info)
         self.open_menu.show()
         self.close()
 
-    def start_rec(self):
+    def start_rec2(self):
         self.open_rec2 = test6.Rec2(Rec1.rec1_info)
         self.open_rec2.show()
+        self.close()
+
+    def start_rec3(self):
+        self.open_rec3 = test8.Rec3(Rec1.rec1_info)
+        self.open_rec3.show()
         self.close()
 
 if __name__ == '__main__':
