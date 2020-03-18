@@ -6,7 +6,7 @@ from PyQt5 import QtWidgets
 from PyQt5.QtWidgets import QFileDialog
 
 import test5
-#import test9
+import test9
 from rec3 import Ui_Rec3
 
 
@@ -19,7 +19,7 @@ class Rec3(QtWidgets.QMainWindow):
         super(Rec3, self).__init__()
         self.ui = Ui_Rec3()
         self.ui.setupUi(self)
-        Rec3.rec2_info = info
+        Rec3.rec3_info = info
         path = os.getcwd() + "/*"
         files = len(glob.glob(path))
         for file in glob.glob(path):
@@ -38,8 +38,9 @@ class Rec3(QtWidgets.QMainWindow):
         Rec3.file = self.ui.comboBox.currentText()
         Rec3.video = self.ui.lineEdit_file.text()
         print(Rec3.file," ", Rec3.video)
-        # self.open_progressrec = test7.Progress_recognition(Rec2.rec2_info,Rec2.file,Rec2.dir)
-        # self.open_progressrec.show()
+        print(Rec3.rec3_info)
+        self.open_progressrec1 = test9.Progress_recognition1(Rec3.rec3_info,Rec3.file,Rec3.video)
+        self.open_progressrec1.show()
         self.close()
 
     def open_file(self):

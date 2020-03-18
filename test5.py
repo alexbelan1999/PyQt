@@ -32,6 +32,7 @@ class Rec1(QtWidgets.QMainWindow):
         self.close()
 
     def start_rec3(self):
+        print(Rec1.rec1_info)
         self.open_rec3 = test8.Rec3(Rec1.rec1_info)
         self.open_rec3.show()
         self.close()

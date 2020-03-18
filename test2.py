@@ -39,6 +39,7 @@ class Menu(QtWidgets.QMainWindow):
         self.close()
 
     def start_recognition(self):
+        print(Menu.menu_info)
         self.open_recognition = test5.Rec1(Menu.menu_info)
         self.open_recognition.show()
         self.close()
