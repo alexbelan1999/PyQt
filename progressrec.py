@@ -4,7 +4,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Progress_recognition(object):
     def setupUi(self, Progress_recognition):
         Progress_recognition.setObjectName("Progress_recognition")
-        Progress_recognition.setFixedSize(450, 300)
+        Progress_recognition.setFixedSize(450, 330)
         ico = QtGui.QIcon("mylogo.png")
         Progress_recognition.setWindowIcon(ico)
         font = QtGui.QFont()
@@ -34,13 +34,18 @@ class Ui_Progress_recognition(object):
         self.textEdit.setFont(font)
         self.textEdit.setObjectName("textEdit")
 
+        self.pushButton_report = QtWidgets.QPushButton(self.centralwidget)
+        self.pushButton_report.setGeometry(QtCore.QRect(100, 240, 250, 30))
+        self.pushButton_report.setFont(font)
+        self.pushButton_report.setObjectName("pushButton_report")
+
         self.pushButton_menu = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_menu.setGeometry(QtCore.QRect(100, 240, 140, 30))
+        self.pushButton_menu.setGeometry(QtCore.QRect(100, 280, 140, 30))
         self.pushButton_menu.setFont(font)
         self.pushButton_menu.setObjectName("pushButton_menu")
 
         self.pushButton_exit = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_exit.setGeometry(QtCore.QRect(260, 240, 90, 30))
+        self.pushButton_exit.setGeometry(QtCore.QRect(260, 280, 90, 30))
         self.pushButton_exit.setFont(font)
         self.pushButton_exit.setObjectName("pushButton_exit")
 
@@ -63,3 +68,4 @@ class Ui_Progress_recognition(object):
         self.pushButton_menu.setText(_translate("Progress_recognition", "В главное меню"))
         self.pushButton_exit.setText(_translate("Progress_recognition", "Выход"))
         self.pushButton_start.setText(_translate("Progress_recognition", "Начало распознавания"))
+        self.pushButton_report.setText(_translate("Progress_recognition", "Отправить отчет"))

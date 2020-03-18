@@ -1,8 +1,10 @@
+import datetime
 import glob
 import os
 import sys
 import time
 
+import postgresql as pg
 from PyQt5 import QtWidgets
 
 import test2
@@ -25,15 +27,17 @@ class Progress_recognition(QtWidgets.QMainWindow):
         self.ui.pushButton_menu.clicked.connect(self.back_menu)
         self.ui.pushButton_exit.clicked.connect(self.close)
         self.ui.pushButton_start.clicked.connect(self.start_progress)
+        self.ui.pushButton_report.clicked.connect(self.report)
 
     def back_menu(self):
-        self.open_menu = test2.Menu(Progress_recognition.progress_training_info)
+        self.open_menu = test2.Menu(Progress_recognition.progress_recognition_info)
         self.open_menu.show()
         self.close()
 
     def start_progress(self):
         self.ui.pushButton_exit.setDisabled(True)
         self.ui.pushButton_menu.setDisabled(True)
+        self.ui.pushButton_report.setDisabled(True)
         self.progress()
 
     def progress(self):
@@ -44,14 +48,23 @@ class Progress_recognition(QtWidgets.QMainWindow):
         for file in glob.glob(path):
             time.sleep(2)
             self.ui.textEdit.append(file)
-            #self.ui.text.setVerticalScrollBar()
             self.ui.progressBar.setValue(round(number/files,2) * 100)
             number += 1
             if  number == files:
                 self.ui.pushButton_exit.setDisabled(False)
                 self.ui.pushButton_menu.setDisabled(False)
+                self.ui.pushButton_report.setDisabled(False)
 
-        print(self.ui.textEdit.toPlainText())
+    def report(self):
+        report = self.ui.textEdit.toPlainText()
+        report = list(report.split('\n'))
+        print(report)
+        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+
+        persons = []
+        persons.append(["Alex", timestamp])
+        print(pg.insert(persons))
+
 if __name__ == '__main__':
     app = QtWidgets.QApplication([])
     application = Progress_recognition()

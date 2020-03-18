@@ -1,3 +1,5 @@
+import datetime
+
 import psycopg2
 
 
@@ -6,8 +8,6 @@ def insert(persons: list):
     try:
 
         connection = psycopg2.connect(dbname='testdb', user='postgres', password='1234', host='127.0.0.1')
-        if connection.is_connected():
-            print('Connected to PostgreSQL database')
         with connection.cursor() as cursor:
             for person in persons:
                 sql = "INSERT INTO public.persons (name, addtime) VALUES ('" + person[0] + "', '" + person[1] + "');"
@@ -23,6 +23,7 @@ def insert(persons: list):
     finally:
         if exit == True:
             connection.close()
+    return exit
 
 
 def select_all():
