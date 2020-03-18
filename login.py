@@ -112,5 +112,6 @@ class Ui_Login(object):
 
         if test:
             self.label_check.setText("OK!")
+            self.pushButton_menu.setDisabled(False)
         else:
             self.label_check.setText("ERROR!")
