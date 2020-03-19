@@ -5,6 +5,7 @@ from PyQt5 import QtWidgets
 import test2
 import test6
 import test8
+import webcamera
 from rec1 import Ui_Rec1
 
 
@@ -20,6 +21,7 @@ class Rec1(QtWidgets.QMainWindow):
         self.ui.pushButton_exit.clicked.connect(self.close)
         self.ui.pushButton_photo.clicked.connect(self.start_rec2)
         self.ui.pushButton_video.clicked.connect(self.start_rec3)
+        self.ui.pushButton_camera.clicked.connect(self.start_camera)
 
     def back(self):
         self.open_menu = test2.Menu(Rec1.rec1_info)
@@ -35,6 +37,12 @@ class Rec1(QtWidgets.QMainWindow):
         print(Rec1.rec1_info)
         self.open_rec3 = test8.Rec3(Rec1.rec1_info)
         self.open_rec3.show()
+        self.close()
+
+    def start_camera(self):
+        print(Rec1.rec1_info)
+        self.open_camera = webcamera.Camera(Rec1.rec1_info)
+        self.open_camera.show()
         self.close()
 
 if __name__ == '__main__':
