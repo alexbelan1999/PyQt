@@ -1,4 +1,6 @@
 import datetime
+import glob
+import os
 import sys
 
 import cv2
@@ -18,6 +20,11 @@ class Camera(QtWidgets.QMainWindow):
         self.ui = Ui_Camera()
         self.ui.setupUi(self)
         Camera.camera_info = info
+        path = os.getcwd() + "/*"
+        files = len(glob.glob(path))
+        for file in glob.glob(path):
+            self.ui.comboBox.addItem(file)
+
         self.ui.pushButton_start.clicked.connect(self.camera)
         self.ui.pushButton_stop.clicked.connect(self.stop_rec)
         self.ui.pushButton_exit.clicked.connect(self.close)
