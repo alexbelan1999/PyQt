@@ -6,6 +6,7 @@ import test
 import test1
 import test3
 import test5
+import test10
 from menu import Ui_Menu
 
 
@@ -22,6 +23,7 @@ class Menu(QtWidgets.QMainWindow):
         self.ui.pushButton_exit.clicked.connect(self.close)
         self.ui.pushButton_training.clicked.connect(self.start_training)
         self.ui.pushButton_recognition.clicked.connect(self.start_recognition)
+        self.ui.pushButton_db.clicked.connect(self.start_db)
 
     def back(self):
         self.open_login = test.Login()
@@ -42,6 +44,12 @@ class Menu(QtWidgets.QMainWindow):
         print(Menu.menu_info)
         self.open_recognition = test5.Rec1(Menu.menu_info)
         self.open_recognition.show()
+        self.close()
+
+    def start_db(self):
+        print(Menu.menu_info)
+        self.open_db = test10.DB(Menu.menu_info)
+        self.open_db.show()
         self.close()
 
 
