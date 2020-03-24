@@ -1,13 +1,13 @@
 import datetime
 import glob
-import os
 import sys
 import time
 
-import postgresql as pg
 from PyQt5 import QtWidgets
 
+import postgresql as pg
 import test2
+import test11
 from progressrec1 import Ui_Progress_recognition1
 
 
@@ -16,7 +16,7 @@ class Progress_recognition1(QtWidgets.QMainWindow):
     dir = ""
     progress_recognition1_info = []
 
-    def __init__(self, info=["", "", "", ""], file = "", video = ""):
+    def __init__(self, info=["", "", "", ""], file="", video=""):
         super(Progress_recognition1, self).__init__()
         self.ui = Ui_Progress_recognition1()
         self.ui.setupUi(self)
@@ -31,7 +31,6 @@ class Progress_recognition1(QtWidgets.QMainWindow):
 
     def back_menu(self):
         self.open_menu = test2.Menu(Progress_recognition1.progress_recognition1_info)
-        print(Progress_recognition1.progress_recognition1_info)
         self.open_menu.show()
         self.close()
 
@@ -49,9 +48,9 @@ class Progress_recognition1(QtWidgets.QMainWindow):
         for file in glob.glob(path):
             time.sleep(2)
             self.ui.textEdit.append(file)
-            self.ui.progressBar.setValue(round(number/files,2) * 100)
+            self.ui.progressBar.setValue(round(number / files, 2) * 100)
             number += 1
-            if  number == files:
+            if number == files:
                 self.ui.pushButton_exit.setDisabled(False)
                 self.ui.pushButton_menu.setDisabled(False)
                 self.ui.pushButton_report.setDisabled(False)
@@ -60,11 +59,11 @@ class Progress_recognition1(QtWidgets.QMainWindow):
         report = self.ui.textEdit.toPlainText()
         report = list(report.split('\n'))
         print(report)
-        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        person = ["Alex", "Dima", "Vitaly", "Ivan", "Petr", "Artem", "Andrey"]
+        self.open_report = test11.Report(Progress_recognition1.progress_recognition1_info,person)
+        self.open_report.show()
+        self.close()
 
-        persons = []
-        persons.append(["Alex", timestamp])
-        print(pg.insert(persons))
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication([])
