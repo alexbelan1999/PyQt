@@ -9,6 +9,7 @@ from PyQt5.QtGui import QPixmap, QImage
 
 from camera import Ui_Camera
 import  test2
+import test11
 import postgresql as pg
 
 class Camera(QtWidgets.QMainWindow):
@@ -71,11 +72,10 @@ class Camera(QtWidgets.QMainWindow):
         report = self.ui.textEdit.toPlainText()
         report = list(report.split('\n'))
         print(report)
-        timestamp = datetime.datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-
-        persons = []
-        persons.append(["Alex", timestamp])
-        print(pg.insert(persons))
+        person = ["Alex", "Dima", "Vitaly", "Ivan", "Petr", "Artem", "Andrey"]
+        self.open_report = test11.Report(Camera.camera_info, person)
+        self.open_report.show()
+        self.close()
 
 
 if __name__ == '__main__':

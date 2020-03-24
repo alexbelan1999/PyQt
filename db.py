@@ -10,11 +10,11 @@ class Ui_DB(object):
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(14)
-        
+
         self.centralwidget = QtWidgets.QWidget(DB)
         self.centralwidget.setObjectName("centralwidget")
         self.label_table = QtWidgets.QLabel(self.centralwidget)
-        self.label_table.setGeometry(QtCore.QRect(50, 20, 130, 25))
+        self.label_table.setGeometry(QtCore.QRect(50, 20, 130, 30))
         self.label_table.setFont(font)
         self.label_table.setObjectName("label_table")
 
@@ -28,7 +28,7 @@ class Ui_DB(object):
         self.pushButton_back.setFont(font)
         self.pushButton_back.setObjectName("pushButton_back")
         self.pushButton_exit = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_exit.setGeometry(QtCore.QRect(240, 420, 171, 31))
+        self.pushButton_exit.setGeometry(QtCore.QRect(240, 420, 170, 30))
         self.pushButton_exit.setFont(font)
         self.pushButton_exit.setObjectName("pushButton_exit")
         DB.setCentralWidget(self.centralwidget)

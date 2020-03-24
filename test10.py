@@ -1,12 +1,8 @@
-import datetime
-import glob
-import os
 import sys
-import time
 
-import postgresql as pg
 from PyQt5 import QtWidgets, QtGui
 
+import postgresql as pg
 import test2
 from db import Ui_DB
 
@@ -30,8 +26,8 @@ class DB(QtWidgets.QMainWindow):
         model.setHorizontalHeaderLabels(["id", "name", "addtime"])
 
         self.ui.tableView.setModel(model)
-        self.ui.tableView.setColumnWidth(0,50)
-        self.ui.tableView.setColumnWidth(1,150)
+        self.ui.tableView.setColumnWidth(0, 50)
+        self.ui.tableView.setColumnWidth(1, 150)
         self.ui.tableView.setColumnWidth(2, 270)
         self.ui.pushButton_exit.clicked.connect(self.close)
         self.ui.pushButton_back.clicked.connect(self.back_menu)
@@ -40,6 +36,7 @@ class DB(QtWidgets.QMainWindow):
         self.open_menu = test2.Menu(DB.DB_info)
         self.open_menu.show()
         self.close()
+
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication([])

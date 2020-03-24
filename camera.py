@@ -15,18 +15,18 @@ class Ui_Camera(object):
         self.centralwidget = QtWidgets.QWidget(Camera)
 
         self.label_combo = QtWidgets.QLabel(self.centralwidget)
-        self.label_combo.setGeometry(QtCore.QRect(50, 20, 450, 25))
+        self.label_combo.setGeometry(QtCore.QRect(50, 20, 450, 30))
         self.label_combo.setFont(font)
         self.label_combo.setObjectName("label_combo")
 
         self.comboBox = QtWidgets.QComboBox(self.centralwidget)
-        self.comboBox.setGeometry(QtCore.QRect(50, 60, 450, 25))
+        self.comboBox.setGeometry(QtCore.QRect(50, 60, 450, 30))
         self.comboBox.setFont(font)
         self.comboBox.setObjectName("comboBox")
 
         self.centralwidget.setObjectName("centralwidget")
         self.label = QtWidgets.QLabel(self.centralwidget)
-        self.label.setGeometry(QtCore.QRect(50, 100, 130, 25))
+        self.label.setGeometry(QtCore.QRect(50, 100, 130, 30))
         self.label.setFont(font)
         self.label.setObjectName("label")
         
@@ -35,7 +35,7 @@ class Ui_Camera(object):
         self.label_video.setObjectName("label_video")
 
         self.textEdit = QtWidgets.QTextEdit(self.centralwidget)
-        self.textEdit.setGeometry(QtCore.QRect(700, 140, 200, 482))
+        self.textEdit.setGeometry(QtCore.QRect(700, 140, 200, 480))
         self.textEdit.setFont(font)
         self.textEdit.setObjectName("textEdit")
         
