@@ -10,20 +10,20 @@ class Ui_Training(object):
         font = QtGui.QFont()
         font.setFamily("Times New Roman")
         font.setPointSize(14)
-        
+
         self.centralwidget = QtWidgets.QWidget(Training)
         self.centralwidget.setObjectName("centralwidget")
-        
+
         self.label_file = QtWidgets.QLabel(self.centralwidget)
         self.label_file.setGeometry(QtCore.QRect(50, 20, 160, 30))
         self.label_file.setFont(font)
         self.label_file.setObjectName("label_file")
-        
+
         self.lineEdit_file = QtWidgets.QLineEdit(self.centralwidget)
         self.lineEdit_file.setGeometry(QtCore.QRect(50, 60, 320, 30))
         self.lineEdit_file.setFont(font)
         self.lineEdit_file.setObjectName("lineEdit_file")
-        
+
         self.pushButton_dir = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_dir.setGeometry(QtCore.QRect(50, 100, 320, 30))
         self.pushButton_dir.setFont(font)
@@ -38,22 +38,22 @@ class Ui_Training(object):
         self.lineEdit_dir.setGeometry(QtCore.QRect(50, 180, 320, 30))
         self.lineEdit_dir.setFont(font)
         self.lineEdit_dir.setObjectName("lineEdit_dir")
-        
+
         self.pushButton_back = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_back.setGeometry(QtCore.QRect(50, 220, 100, 30))
         self.pushButton_back.setFont(font)
         self.pushButton_back.setObjectName("pushButton_back")
-        
+
         self.pushButton_exit = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_exit.setGeometry(QtCore.QRect(160, 220, 100, 30))
         self.pushButton_exit.setFont(font)
         self.pushButton_exit.setObjectName("pushButton_exit")
-        
+
         self.pushButton_next = QtWidgets.QPushButton(self.centralwidget)
         self.pushButton_next.setGeometry(QtCore.QRect(270, 220, 100, 30))
         self.pushButton_next.setFont(font)
         self.pushButton_next.setObjectName("pushButton_next")
-        
+
         Training.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(Training)
         self.menubar.setGeometry(QtCore.QRect(0, 0, 800, 21))

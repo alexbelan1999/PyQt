@@ -4,7 +4,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Progress_training(object):
     def setupUi(self, Progress_training):
         Progress_training.setObjectName("Progress_training")
-        Progress_training.setFixedSize(450, 250)
+        Progress_training.setFixedSize(360, 190)
         ico = QtGui.QIcon("mylogo.png")
         Progress_training.setWindowIcon(ico)
         font = QtGui.QFont()
@@ -15,27 +15,27 @@ class Ui_Progress_training(object):
         self.centralwidget.setObjectName("centralwidget")
 
         self.label_progress = QtWidgets.QLabel(self.centralwidget)
-        self.label_progress.setGeometry(QtCore.QRect(100, 20, 170, 25))
+        self.label_progress.setGeometry(QtCore.QRect(50, 20, 180, 30))
         self.label_progress.setFont(font)
         self.label_progress.setObjectName("label_progress")
 
         self.pushButton_start = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_start.setGeometry(QtCore.QRect(100, 50, 250, 30))
+        self.pushButton_start.setGeometry(QtCore.QRect(50, 60, 260, 30))
         self.pushButton_start.setFont(font)
         self.pushButton_start.setObjectName("pushButton_start")
 
         self.progressBar = QtWidgets.QProgressBar(self.centralwidget)
-        self.progressBar.setGeometry(QtCore.QRect(100, 90, 250, 25))
+        self.progressBar.setGeometry(QtCore.QRect(50, 100, 260, 30))
         self.progressBar.setFont(font)
         self.progressBar.setObjectName("progressBar")
 
         self.pushButton_menu = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_menu.setGeometry(QtCore.QRect(100, 130, 140, 30))
+        self.pushButton_menu.setGeometry(QtCore.QRect(50, 140, 140, 30))
         self.pushButton_menu.setFont(font)
         self.pushButton_menu.setObjectName("pushButton_menu")
 
         self.pushButton_exit = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_exit.setGeometry(QtCore.QRect(260, 130, 90, 30))
+        self.pushButton_exit.setGeometry(QtCore.QRect(200, 140, 110, 30))
         self.pushButton_exit.setFont(font)
         self.pushButton_exit.setObjectName("pushButton_exit")
 

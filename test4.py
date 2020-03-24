@@ -1,10 +1,8 @@
 import glob
-import os
 import sys
 import time
 
 from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QFileDialog
 
 import test2
 from progressbar import Ui_Progress_training
@@ -15,7 +13,7 @@ class Progress_training(QtWidgets.QMainWindow):
     dir = ""
     progress_training_info = []
 
-    def __init__(self, info=["", "", "", ""], file = "", dir = ""):
+    def __init__(self, info=["", "", "", ""], file="", dir=""):
         super(Progress_training, self).__init__()
         self.ui = Ui_Progress_training()
         self.ui.setupUi(self)
@@ -44,11 +42,12 @@ class Progress_training(QtWidgets.QMainWindow):
         number = 1
         for file in glob.glob(path):
             time.sleep(2)
-            self.ui.progressBar.setValue(round(number/files,2) * 100)
+            self.ui.progressBar.setValue(round(number / files, 2) * 100)
             number += 1
-            if  number == files:
+            if number == files:
                 self.ui.pushButton_exit.setDisabled(False)
                 self.ui.pushButton_menu.setDisabled(False)
+
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication([])
