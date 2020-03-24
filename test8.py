@@ -37,15 +37,14 @@ class Rec3(QtWidgets.QMainWindow):
     def next(self):
         Rec3.file = self.ui.comboBox.currentText()
         Rec3.video = self.ui.lineEdit_file.text()
-        print(Rec3.file," ", Rec3.video)
-        print(Rec3.rec3_info)
-        self.open_progressrec1 = test9.Progress_recognition1(Rec3.rec3_info,Rec3.file,Rec3.video)
+        self.open_progressrec1 = test9.Progress_recognition1(Rec3.rec3_info, Rec3.file, Rec3.video)
         self.open_progressrec1.show()
         self.close()
 
     def open_file(self):
         video = QFileDialog.getOpenFileName(self, 'Open file', os.getcwd())[0]
         self.ui.lineEdit_file.setText(video)
+
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication([])

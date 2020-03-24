@@ -4,7 +4,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Rec3(object):
     def setupUi(self, Rec3):
         Rec3.setObjectName("Rec3")
-        Rec3.setFixedSize(550, 400)
+        Rec3.setFixedSize(520, 270)
         ico = QtGui.QIcon("mylogo.png")
         Rec3.setWindowIcon(ico)
         font = QtGui.QFont()
@@ -15,42 +15,42 @@ class Ui_Rec3(object):
         self.centralwidget.setObjectName("centralwidget")
 
         self.label_combo = QtWidgets.QLabel(self.centralwidget)
-        self.label_combo.setGeometry(QtCore.QRect(60, 20, 420, 30))
+        self.label_combo.setGeometry(QtCore.QRect(50, 20, 420, 30))
         self.label_combo.setFont(font)
         self.label_combo.setObjectName("label_combo")
 
         self.comboBox = QtWidgets.QComboBox(self.centralwidget)
-        self.comboBox.setGeometry(QtCore.QRect(60, 60, 420, 30))
+        self.comboBox.setGeometry(QtCore.QRect(50, 60, 420, 30))
         self.comboBox.setFont(font)
         self.comboBox.setObjectName("comboBox")
 
         self.pushButton_file = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_file.setGeometry(QtCore.QRect(60, 100, 420, 30))
+        self.pushButton_file.setGeometry(QtCore.QRect(50, 100, 420, 30))
         self.pushButton_file.setFont(font)
         self.pushButton_file.setObjectName("pushButton_file")
 
         self.label_file = QtWidgets.QLabel(self.centralwidget)
-        self.label_file.setGeometry(QtCore.QRect(60, 140, 420, 30))
+        self.label_file.setGeometry(QtCore.QRect(50, 140, 420, 30))
         self.label_file.setFont(font)
         self.label_file.setObjectName("label_file")
 
         self.lineEdit_file = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_file.setGeometry(QtCore.QRect(60, 180, 420, 30))
+        self.lineEdit_file.setGeometry(QtCore.QRect(50, 180, 420, 30))
         self.lineEdit_file.setFont(font)
         self.lineEdit_file.setObjectName("lineEdit_file")
 
         self.pushButton_back = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_back.setGeometry(QtCore.QRect(60, 220, 130, 30))
+        self.pushButton_back.setGeometry(QtCore.QRect(50, 220, 130, 30))
         self.pushButton_back.setFont(font)
         self.pushButton_back.setObjectName("pushButton_back")
 
         self.pushButton_exit = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_exit.setGeometry(QtCore.QRect(200, 220, 130, 30))
+        self.pushButton_exit.setGeometry(QtCore.QRect(190, 220, 130, 30))
         self.pushButton_exit.setFont(font)
         self.pushButton_exit.setObjectName("pushButton_exit")
 
         self.pushButton_next = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_next.setGeometry(QtCore.QRect(340, 220, 130, 30))
+        self.pushButton_next.setGeometry(QtCore.QRect(330, 220, 130, 30))
         self.pushButton_next.setFont(font)
         self.pushButton_next.setObjectName("pushButton_next")
 
