@@ -4,7 +4,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Training(object):
     def setupUi(self, Training):
         Training.setObjectName("Training")
-        Training.setFixedSize(520, 320)
+        Training.setFixedSize(420, 270)
         ico = QtGui.QIcon("mylogo.png")
         Training.setWindowIcon(ico)
         font = QtGui.QFont()
@@ -15,44 +15,44 @@ class Ui_Training(object):
         self.centralwidget.setObjectName("centralwidget")
         
         self.label_file = QtWidgets.QLabel(self.centralwidget)
-        self.label_file.setGeometry(QtCore.QRect(100, 20, 160, 30))
+        self.label_file.setGeometry(QtCore.QRect(50, 20, 160, 30))
         self.label_file.setFont(font)
         self.label_file.setObjectName("label_file")
         
         self.lineEdit_file = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_file.setGeometry(QtCore.QRect(100, 60, 320, 20))
+        self.lineEdit_file.setGeometry(QtCore.QRect(50, 60, 320, 30))
         self.lineEdit_file.setFont(font)
         self.lineEdit_file.setObjectName("lineEdit_file")
         
         self.pushButton_dir = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_dir.setGeometry(QtCore.QRect(100, 90, 320, 30))
+        self.pushButton_dir.setGeometry(QtCore.QRect(50, 100, 320, 30))
         self.pushButton_dir.setFont(font)
         self.pushButton_dir.setObjectName("pushButton_dir")
+
+        self.label_dir = QtWidgets.QLabel(self.centralwidget)
+        self.label_dir.setGeometry(QtCore.QRect(50, 140, 160, 30))
+        self.label_dir.setFont(font)
+        self.label_dir.setObjectName("label_dir")
+
+        self.lineEdit_dir = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit_dir.setGeometry(QtCore.QRect(50, 180, 320, 30))
+        self.lineEdit_dir.setFont(font)
+        self.lineEdit_dir.setObjectName("lineEdit_dir")
         
         self.pushButton_back = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_back.setGeometry(QtCore.QRect(100, 210, 100, 30))
+        self.pushButton_back.setGeometry(QtCore.QRect(50, 220, 100, 30))
         self.pushButton_back.setFont(font)
         self.pushButton_back.setObjectName("pushButton_back")
         
         self.pushButton_exit = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_exit.setGeometry(QtCore.QRect(210, 210, 100, 30))
+        self.pushButton_exit.setGeometry(QtCore.QRect(160, 220, 100, 30))
         self.pushButton_exit.setFont(font)
         self.pushButton_exit.setObjectName("pushButton_exit")
         
         self.pushButton_next = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_next.setGeometry(QtCore.QRect(320, 210, 100, 30))
+        self.pushButton_next.setGeometry(QtCore.QRect(270, 220, 100, 30))
         self.pushButton_next.setFont(font)
         self.pushButton_next.setObjectName("pushButton_next")
-        
-        self.label_dir = QtWidgets.QLabel(self.centralwidget)
-        self.label_dir.setGeometry(QtCore.QRect(100, 140, 160, 30))
-        self.label_dir.setFont(font)
-        self.label_dir.setObjectName("label_dir")
-        
-        self.lineEdit_dir = QtWidgets.QLineEdit(self.centralwidget)
-        self.lineEdit_dir.setGeometry(QtCore.QRect(100, 170, 320, 25))
-        self.lineEdit_dir.setFont(font)
-        self.lineEdit_dir.setObjectName("lineEdit_dir")
         
         Training.setCentralWidget(self.centralwidget)
         self.menubar = QtWidgets.QMenuBar(Training)

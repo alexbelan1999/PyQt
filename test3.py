@@ -32,13 +32,14 @@ class Training(QtWidgets.QMainWindow):
     def next(self):
         Training.file = self.ui.lineEdit_file.text()
         Training.dir = self.ui.lineEdit_dir.text()
-        self.open_progress = test4.Progress_training(Training.training_info,Training.file,Training.dir)
+        self.open_progress = test4.Progress_training(Training.training_info, Training.file, Training.dir)
         self.open_progress.show()
         self.close()
 
     def open_dir(self):
         fdir = QFileDialog.getExistingDirectory(self, 'Open dir', os.getcwd())
         self.ui.lineEdit_dir.setText(fdir)
+
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication([])
