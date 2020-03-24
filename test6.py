@@ -37,14 +37,14 @@ class Rec2(QtWidgets.QMainWindow):
     def next(self):
         Rec2.file = self.ui.comboBox.currentText()
         Rec2.dir = self.ui.lineEdit_dir.text()
-        print(Rec2.file," ", Rec2.dir)
-        self.open_progressrec = test7.Progress_recognition(Rec2.rec2_info,Rec2.file,Rec2.dir)
+        self.open_progressrec = test7.Progress_recognition(Rec2.rec2_info, Rec2.file, Rec2.dir)
         self.open_progressrec.show()
         self.close()
 
     def open_dir(self):
         fdir = QFileDialog.getExistingDirectory(self, 'Open dir', os.getcwd())
         self.ui.lineEdit_dir.setText(fdir)
+
 
 if __name__ == '__main__':
     app = QtWidgets.QApplication([])
