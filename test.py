@@ -14,6 +14,10 @@ class Login(QtWidgets.QMainWindow):
         self.ui.pushButton_menu.setDisabled(True)
         self.ui.pushButton_menu.clicked.connect(self.start_menu)
         self.ui.pushButton_exit.clicked.connect(self.close)
+        self.ui.lineEdit_db.setText("testdb")
+        self.ui.lineEdit_user.setText("postgres")
+        self.ui.lineEdit_password.setText("1234")
+        self.ui.lineEdit_host.setText("127.0.0.1")
 
     def start_menu(self):
         info = []

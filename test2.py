@@ -4,9 +4,9 @@ from PyQt5 import QtWidgets
 
 import test
 import test1
+import test10
 import test3
 import test5
-import test10
 from menu import Ui_Menu
 
 
