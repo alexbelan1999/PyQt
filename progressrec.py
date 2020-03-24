@@ -4,7 +4,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_Progress_recognition(object):
     def setupUi(self, Progress_recognition):
         Progress_recognition.setObjectName("Progress_recognition")
-        Progress_recognition.setFixedSize(450, 330)
+        Progress_recognition.setFixedSize(350, 390)
         ico = QtGui.QIcon("mylogo.png")
         Progress_recognition.setWindowIcon(ico)
         font = QtGui.QFont()
@@ -15,37 +15,37 @@ class Ui_Progress_recognition(object):
         self.centralwidget.setObjectName("centralwidget")
 
         self.label_progress = QtWidgets.QLabel(self.centralwidget)
-        self.label_progress.setGeometry(QtCore.QRect(100, 20, 170, 25))
+        self.label_progress.setGeometry(QtCore.QRect(50, 20, 170, 30))
         self.label_progress.setFont(font)
         self.label_progress.setObjectName("label_progress")
 
         self.pushButton_start = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_start.setGeometry(QtCore.QRect(100, 50, 250, 30))
+        self.pushButton_start.setGeometry(QtCore.QRect(50, 60, 250, 30))
         self.pushButton_start.setFont(font)
         self.pushButton_start.setObjectName("pushButton_start")
 
         self.progressBar = QtWidgets.QProgressBar(self.centralwidget)
-        self.progressBar.setGeometry(QtCore.QRect(100, 90, 250, 25))
+        self.progressBar.setGeometry(QtCore.QRect(50, 100, 250, 30))
         self.progressBar.setFont(font)
         self.progressBar.setObjectName("progressBar")
 
         self.textEdit = QtWidgets.QTextEdit(self.centralwidget)
-        self.textEdit.setGeometry(QtCore.QRect(100, 130, 250, 100))
+        self.textEdit.setGeometry(QtCore.QRect(50, 140, 250, 150))
         self.textEdit.setFont(font)
         self.textEdit.setObjectName("textEdit")
 
         self.pushButton_report = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_report.setGeometry(QtCore.QRect(100, 240, 250, 30))
+        self.pushButton_report.setGeometry(QtCore.QRect(50, 300, 250, 30))
         self.pushButton_report.setFont(font)
         self.pushButton_report.setObjectName("pushButton_report")
 
         self.pushButton_menu = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_menu.setGeometry(QtCore.QRect(100, 280, 140, 30))
+        self.pushButton_menu.setGeometry(QtCore.QRect(50, 340, 140, 30))
         self.pushButton_menu.setFont(font)
         self.pushButton_menu.setObjectName("pushButton_menu")
 
         self.pushButton_exit = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_exit.setGeometry(QtCore.QRect(260, 280, 90, 30))
+        self.pushButton_exit.setGeometry(QtCore.QRect(200, 340, 100, 30))
         self.pushButton_exit.setFont(font)
         self.pushButton_exit.setObjectName("pushButton_exit")
 
