@@ -4,7 +4,7 @@ from PyQt5 import QtCore, QtGui, QtWidgets
 class Ui_DB(object):
     def setupUi(self, DB):
         DB.setObjectName("Camera")
-        DB.setFixedSize(600, 500)
+        DB.setFixedSize(600, 520)
         ico = QtGui.QIcon("mylogo.png")
         DB.setWindowIcon(ico)
         font = QtGui.QFont()
@@ -19,16 +19,16 @@ class Ui_DB(object):
         self.label_table.setObjectName("label_table")
 
         self.tableView = QtWidgets.QTableView(self.centralwidget)
-        self.tableView.setGeometry(QtCore.QRect(50, 60, 500, 330))
+        self.tableView.setGeometry(QtCore.QRect(50, 60, 500, 400))
         self.tableView.setFont(font)
         self.tableView.setObjectName("tableView")
 
         self.pushButton_back = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_back.setGeometry(QtCore.QRect(50, 420, 140, 30))
+        self.pushButton_back.setGeometry(QtCore.QRect(50, 470, 140, 30))
         self.pushButton_back.setFont(font)
         self.pushButton_back.setObjectName("pushButton_back")
         self.pushButton_exit = QtWidgets.QPushButton(self.centralwidget)
-        self.pushButton_exit.setGeometry(QtCore.QRect(240, 420, 170, 30))
+        self.pushButton_exit.setGeometry(QtCore.QRect(240, 470, 170, 30))
         self.pushButton_exit.setFont(font)
         self.pushButton_exit.setObjectName("pushButton_exit")
         DB.setCentralWidget(self.centralwidget)

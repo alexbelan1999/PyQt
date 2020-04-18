@@ -5,7 +5,6 @@ import time
 
 from PyQt5 import QtWidgets
 
-import postgresql as pg
 import test2
 import test11
 from progressrec import Ui_Progress_recognition

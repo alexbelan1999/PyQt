@@ -42,7 +42,7 @@ class Rec3(QtWidgets.QMainWindow):
         self.close()
 
     def open_file(self):
-        video = QFileDialog.getOpenFileName(self, 'Open file', os.getcwd())[0]
+        video = QFileDialog.getOpenFileName(self, 'Open file', os.getcwd(),"*mp4")[0]
         self.ui.lineEdit_file.setText(video)
 
 
